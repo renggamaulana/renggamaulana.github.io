@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.blog-wrap {
+  width: 300px;
+  display: inline-block;
+  height: auto;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid grey;
+}
+
+.blog-wrap img {
+  width: 280px;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(56, 56, 56);
+}
+
+a:hover {
+  color: rgb(128, 128, 128);
+}
+
+.content p {
+  text-indent: 2px;
+}
+
+.p-content {
+  margin-top: 2px;
+  color: grey;
+}
