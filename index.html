@@ -1,36 +1,110 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <nav>
-        <h1>Rengga</h1>
         <ul>
-          <li><a data-page="home" href="#home">Home</a></li>
-          <li><a data-page="project" href="#project">Projects</a></li>
-          <li><a data-page="contact" href="#contact">Contact</a></li>
-          <div class="bubble"></div>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#project">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section data-index="0" class="home" id="home">
-        <h2>Home</h2>
+    <div class="container">
+      <section id="home">
+        <img src="img/1.jpeg" alt="profil" />
+        <h2>Hi, Nice to meet You!</h2>
+        <button class="btn">Contact me</button>
       </section>
-      <section data-index="1" class="project" id="project">
-        <h2>Projects</h2>
-      </section>
-      <section data-index="2" class="contact" id="contact">
-        <h2>Contact</h2>
-      </section>
-    </main>
+    </div>
 
-    <script src="js/app.js"></script>
+    <section id="about">
+      <h2>About me</h2>
+      <div class="container">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis error
+          non blanditiis temporibus qui cumque officiis quisquam quasi fuga.
+          Quibusdam cumque nesciunt voluptas sit voluptatem nihil a ea veniam
+          sint!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
+          asperiores distinctio ratione voluptatem! Eius veritatis magni quod
+          mollitia asperiores beatae cupiditate illo, tenetur dignissimos est
+          facilis nesciunt corrupti earum! Nemo?
+        </p>
+      </div>
+    </section>
+
+    <section id="project">
+      <div class="container">
+        <h2>Project</h2>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="row">
+          <div class="col">
+            <h3>Address</h3>
+            <p class="address">
+              <i class="fas fa-map-marker-alt"></i>
+              Sindang Barang Gg. Bendungan RT 04 RW 02 No. 40, Kel. Sindang
+              Barang, Kec. Bogor Barat, Kota Bogor <br />16117
+            </p>
+          </div>
+          <div class="col">
+            <h3>Social Media</h3>
+            <ul class="social-media">
+              <li>
+                <a href="https://www.instagram.com/renggaamln/" target="_blank"
+                  ><i class="fab fa-instagram"></i> Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://web.facebook.com/profile.php?id=100004812490429"
+                  target="_blank"
+                  ><i class="fab fa-facebook"></i>Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://twitter.com/renggaamln" taregt="_blank"
+                  ><i class="fab fa-twitter"></i>Twitter</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Podcast</h3>
+            <p class="podcast">
+              <a href="https://anchor.fm/rengga-maulana" target="_blank"
+                ><i class="fas fa-microphone-alt"></i>Leisure Time</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/90ae4423bf.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
