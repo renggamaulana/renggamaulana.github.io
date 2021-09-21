@@ -66,6 +66,7 @@ section h2 {
   width: 350px;
   height: 600px;
   display: flex;
+  border-radius: 8px;
 }
 
 #home h2 {
@@ -82,11 +83,6 @@ section h2 {
   color: black;
 }
 
-#about h2:hover {
-  text-shadow: white;
-  cursor: pointer;
-}
-
 #about p {
   display: flex;
   justify-content: space-between;
@@ -100,9 +96,12 @@ section h2 {
   top: 100px;
   right: 300px;
 }
+.btn a {
+  text-decoration: none;
+  color: black;
+}
 
 .btn:hover {
-  background: rgb(68, 68, 68);
   border: white;
   color: white;
 }
@@ -124,6 +123,7 @@ section h2 {
 ul {
   color: rgb(82, 82, 82);
   font-size: 1.1rem;
+  line-height: 1.5rem;
 }
 
 #contact a {
