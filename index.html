@@ -8,22 +8,54 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <title>Rengga Maulana</title>
     <style>
       body {
         background-color: linear-gradient(to bottom top, rgb(50, 134, 145), rgb(143, 217, 240) );  
       }
+
+      .brand, nav {
+        font-family: 'Bebas Neue', cursive;
+      }
+
+      .brand a {
+        text-decoration: none;
+        color: black;
+      }
+
+      nav a {
+        color: black;
+        text-decoration: none;
+        margin-right: 20px;
+        font-size: 22px;
+      }
+
+      ul li {
+        list-style: none;
+      }
     </style>
   </head>
   <body>
+
+    <!-- Nav -->
+    <nav class="d-flex justify-content-around">
+      <div class="brand">
+        <a href=""><h1 class="mt-2">Rengga Maulana</h1></a>
+      </div>
+      <ul class="d-flex p-4">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
     
     <div class="container">
       <div class="row d-flex justify-content-center mt-5 text-center">
-        <div class="col-md-8">
-          <img src="./images/construction.png" alt="Web Under Construction" width="800">
-          <h1>Sorry, we're doing some work on the site</h1>
-          <p>Thank you for being patient. We are doing some work on the site and will be back shortly!</p>
-        </div>
+       
       </div>
     </div>
 
