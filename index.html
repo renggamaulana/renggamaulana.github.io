@@ -16,7 +16,7 @@
   }
 </style>
 <body>
-  <nav class="md:hidden bg-gray-900 w-full flex justify-between items-center p-10 text-white">
+  <!-- <nav class="md:hidden bg-gray-900 w-full flex justify-between items-center p-10 text-white">
     <a href="#profile" class="text-2xl font-semibold">
       <svg class="w-12 h-12 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
         <path fill-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z" clip-rule="evenodd"/>
@@ -28,7 +28,7 @@
         <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M9 8h10M9 12h10M9 16h10M4.99 8H5m-.02 4h.01m0 4H5"/>
       </svg>    
     </button>
-  </nav>
+  </nav> -->
   <div class="flex"> 
     <aside class="hidden md:w-1/4 h-screen bg-gray-900 border-r border-white md:flex flex-col justify-evenly items-center">
       <a href="#profile" class="text-white hover:text-blue-400 text-4xl font-semibold text-center uppercase">Rengga Maulana</a>
@@ -45,8 +45,8 @@
       </ul>
     </aside>
     
-    <main class="w-full bg-gray-900 text-gray-50 self-baseline px-10 h-screen overflow-auto">
-      <section class="min-h-screen pt-5 flex items-center" id="profile">
+    <main class="w-full bg-gray-900 text-gray-50 self-baseline px-5 md:px-10 h-screen overflow-auto">
+      <section class="md:min-h-screen pt-5 flex items-center" id="profile">
         <div class="p-10 md:p-20 flex flex-col gap-10">
           <div class="text-center">
             <a href="#profile" class="text-6xl font-semibold font-amsterdam tracking-wider">Rengga Maulana</a>
@@ -80,9 +80,9 @@
       </section>
       <section class="min-h-screen pt-5" id="projects">
           <h1 class="text-4xl font-semibold mb-5">Projects</h1>
-          <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
-            <div class="md:border md:rounded-lg px-5 py-8">
-              <div class="flex flex-wrap md:flex-nowrap gap-5 md:gap-7">
+          <div class="grid grid-cols-1 gap-3 md:gap-10 md:grid-cols-2">
+            <div class="md:border md:rounded-lg px-3 py-5 md:px-5 md:py-8">
+              <div class="flex flex-wrap md:flex-nowrap items-center gap-5 md:gap-7">
                 <img src="images/homepage.png" class="w-full h-48 md:w-48 md:h-48 object-contain" alt="">
                 <div class="flex justify-between w-full">
                   <h3 class="text-xl font-semibold">Daphone</h3>
@@ -94,10 +94,15 @@
                 </div>
               </div>
               <p>Daphone is an e-commerce website for selling or trade-in a secondhand gadget from around Jabodetabek.</p>
+              <div class="flex gap-3 mt-4">
+                <span class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Laravel</span>
+                <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Tailwindcss</div>
+                <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Vite</div>
+              </div>
             </div>
   
-            <div class="md:border md:rounded-lg px-5 py-8">
-              <div class="flex flex-wrap md:flex-nowrap gap-5 md:gap-7">
+            <div class="md:border md:rounded-lg px-3 py-5 md:px-5 md:py-8">
+              <div class="flex flex-wrap md:flex-nowrap items-center gap-5 md:gap-7">
                 <img src="images/homepage.png" class="w-full h-48 md:w-48 md:h-48 object-contain" alt="">
                 <div class="flex justify-between w-full">
                   <h3 class="text-xl font-semibold">Daphone</h3>
@@ -109,10 +114,15 @@
                 </div>
               </div>
               <p>Daphone is an e-commerce website for selling or trade-in a secondhand gadget from around Jabodetabek.</p>
+              <div class="flex gap-3 mt-4">
+                <span class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Laravel</span>
+                <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Tailwindcss</div>
+                <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Vite</div>
+              </div>
             </div>
   
-            <div class="md:border md:rounded-lg px-5 py-8">
-              <div class="flex flex-wrap md:flex-nowrap gap-5 md:gap-7">
+            <div class="md:border md:rounded-lg px-3 py-5 md:px-5 md:py-8">
+              <div class="flex flex-wrap md:flex-nowrap items-center gap-5 md:gap-7">
                 <img src="images/homepage.png" class="w-full h-48 md:w-48 md:h-48 object-contain" alt="">
                 <div class="flex justify-between w-full">
                   <h3 class="text-xl font-semibold">Daphone</h3>
@@ -124,10 +134,15 @@
                 </div>
               </div>
               <p>Daphone is an e-commerce website for selling or trade-in a secondhand gadget from around Jabodetabek.</p>
+              <div class="flex gap-3 mt-4">
+                <span class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Laravel</span>
+                <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Tailwindcss</div>
+                <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Vite</div>
+              </div>
             </div>
   
-            <div class="md:border md:rounded-lg px-5 py-8">
-              <div class="flex flex-wrap md:flex-nowrap gap-5 md:gap-7">
+            <div class="md:border md:rounded-lg px-3 py-5 md:px-5 md:py-8">
+              <div class="flex flex-wrap md:flex-nowrap items-center gap-5 md:gap-7">
                 <img src="images/homepage.png" class="w-full h-48 md:w-48 md:h-48 object-contain" alt="">
                 <div class="flex justify-between w-full">
                   <h3 class="text-xl font-semibold">Daphone</h3>
@@ -139,6 +154,11 @@
                 </div>
               </div>
               <p>Daphone is an e-commerce website for selling or trade-in a secondhand gadget from around Jabodetabek.</p>
+              <div class="flex gap-3 mt-4">
+                <span class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Laravel</span>
+                <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Tailwindcss</div>
+                <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Vite</div>
+              </div>
             </div>
           </div>
       </section>
