@@ -29,7 +29,7 @@
       </svg>    
     </button>
   </nav> -->
-  <nav class="md:hidden fixed bottom-10 left-1/2 transform -translate-x-1/2 px-8 py-2 rounded-full bg-gray-800 shadow-lg">
+  <nav class="md:hidden fixed bottom-5 left-1/2 transform -translate-x-1/2 px-8 py-2 rounded-full bg-gray-800 shadow-lg">
     <ul class="flex gap-10 text-white">
       <li>
         <a class="hover:text-blue-300" href="#projects">
@@ -206,32 +206,88 @@
           <p class="text-xl tracking-wide">Tools and technologies I use.</p>
         </div>
 
-        <div class="flex flex-col rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 ">
-          <p class="m-0 block shrink-0 px-4 py-2 font-medium text-md md:text-xl text-neutral-900 dark:text-neutral-100">Coding</h3>
-          <div class="relative flex-1 overflow-hidden rounded-xl border shadow-sm border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950 grid gap-x-2 p-2 sm:grid-cols-2">
-            <!-- Github -->
-            <a href="" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
-              <img src="images/gihub.png" class="w-12 h-12" alt="">
-              <div>
-                <div class="flex items-center gap-2">
-                  <p class="font-medium text-sm text-neutral-900 dark:text-neutral-100">Github</p>
-                  <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">Featured</span>
+        <!-- Tools Section -->
+        <div class="flex flex-col gap-8">
+          <!-- Coding -->
+          <div class="flex flex-col rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 ">
+            <p class="m-0 block shrink-0 px-4 py-2 font-medium text-md md:text-xl text-neutral-900 dark:text-neutral-100">Coding</h3>
+            <div class="relative flex-1 overflow-hidden rounded-xl border shadow-sm border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950 grid gap-x-2 p-2 sm:grid-cols-2">
+              <!-- Github -->
+              <a href="" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                <img src="images/github.png" class="w-12 h-12 object-cover rounded-lg" alt="">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <p class="font-medium text-sm text-neutral-900 dark:text-neutral-100">Github</p>
+                    <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">Featured</span>
+                  </div>
+                  <p class="text-neutral-500 text-sm dark:text-neutral-400">Simple repository management.</p>
                 </div>
-              </div>
-              <p class="text-neutral-500 text-sm dark:text-neutral-400">Simple repository management.</p>
-            </a>
-            <!-- Postman -->
-            <a href="" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
-              <img src="images/postman.jpeg" class="w-12 h-12" alt="">
-              <div>
-                <div class="flex items-center gap-2">
-                  <p class="font-medium text-sm text-neutral-900 dark:text-neutral-100">Postman</p>
-                  <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">Featured</span>
+              </a>
+              <!-- Postman -->
+              <a href="" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                <img src="images/postman.jpeg" class="w-12 h-12 object-cover rounded-lg" alt="">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <p class="font-medium text-sm text-neutral-900 dark:text-neutral-100">Postman</p>
+                    <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">Featured</span>
+                  </div>
+                  <p class="text-neutral-500 text-sm dark:text-neutral-400">Build and test API.</p>
                 </div>
-              </div>
-              <p class="text-neutral-500 text-sm dark:text-neutral-400">Build and test API.</p>
-            </a>
+              </a>
+              <!-- Chat GPT -->
+              <a href="" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                <img src="images/chatgpt.png" class="w-12 h-12 object-cover rounded-lg" alt="">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <p class="font-medium text-sm text-neutral-900 dark:text-neutral-100">Chat GPT</p>
+                    <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">Featured</span>
+                  </div>
+                  <p class="text-neutral-500 text-sm dark:text-neutral-400">ChatGPT on your desktop.</p>
+                </div>
+              </a>
+            </div>
           </div>
+  
+          <!-- Productivity -->
+          <div class="flex flex-col rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900">
+            <p class="m-0 block shrink-0 px-4 py-2 font-medium text-md md:text-xl text-neutral-900 dark:text-neutral-100">Productivity</h3>
+            <div class="relative flex-1 overflow-hidden rounded-xl border shadow-sm border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950 grid gap-x-2 p-2 sm:grid-cols-2">
+              <!-- Notion -->
+              <a href="" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                <img src="images/notion.png" class="w-12 h-12 object-cover rounded-lg" alt="">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <p class="font-medium text-sm text-neutral-900 dark:text-neutral-100">Notion</p>
+                    <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">Featured</span>
+                  </div>
+                  <p class="text-neutral-500 text-sm dark:text-neutral-400">Documents with endless possibilities.</p>
+                </div>
+              </a>
+              <!-- Postman -->
+              <a href="" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                <img src="images/pitch.png" class="w-12 h-12 object-cover rounded-lg" alt="">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <p class="font-medium text-sm text-neutral-900 dark:text-neutral-100">Pitch</p>
+                    <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">Featured</span>
+                  </div>
+                  <p class="text-neutral-500 text-sm dark:text-neutral-400">Modern, collaborative presentation tool.</p>
+                </div>
+              </a>
+              <!-- Chat GPT -->
+              <a href="" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                <img src="images/simple-mind.png" class="w-12 h-12 object-cover rounded-lg" alt="">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <p class="font-medium text-sm text-neutral-900 dark:text-neutral-100">Simple Mind</p>
+                    <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">Featured</span>
+                  </div>
+                  <p class="text-neutral-500 text-sm dark:text-neutral-400">Visual mind mapping tool for brainstorming.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        
         </div>
       </section>
       <section class="min-h-screen pt-5" id="about">
