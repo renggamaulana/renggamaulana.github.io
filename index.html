@@ -16,20 +16,7 @@
   }
 </style>
 <body>
-  <!-- <nav class="md:hidden bg-gray-900 w-full flex justify-between items-center p-10 text-white">
-    <a href="#profile" class="text-2xl font-semibold">
-      <svg class="w-12 h-12 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-        <path fill-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z" clip-rule="evenodd"/>
-      </svg>
-      
-    </a>
-    <button onclick="openMenu()">
-      <svg class="w-12 h-12 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M9 8h10M9 12h10M9 16h10M4.99 8H5m-.02 4h.01m0 4H5"/>
-      </svg>    
-    </button>
-  </nav> -->
-  <nav class="md:hidden fixed bottom-5 left-1/2 transform -translate-x-1/2 px-8 py-2 rounded-full bg-gray-800 shadow-lg">
+  <nav class="md:hidden fixed bottom-5 z-10 left-1/2 transform -translate-x-1/2 px-8 py-2 rounded-full bg-gray-800 shadow-lg">
     <ul class="flex gap-10 text-white">
       <li>
         <a class="hover:text-blue-300" href="#projects">
@@ -62,7 +49,12 @@
     </ul>
   </nav>
   <div class="flex"> 
-    <aside class="hidden md:w-1/4 h-screen bg-gray-50 border-r border-white md:flex flex-col justify-evenly items-center">
+    <aside id="sidebar" class="relative transition duration-300 hidden md:w-1/4 h-screen bg-gray-50 border-r border-white md:flex flex-col justify-evenly items-center">
+      <!-- <button onclick="toggleSidebar()" class="absolute top-5 left-5 flex justify-end text-gray-800">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5" />
+        </svg>       
+      </button> -->
       <div class="flex flex-col gap-3 items-center">
         <a href="#profile" class="text-gray-800 hover:text-blue-400 text-4xl font-semibold text-center uppercase">Rengga Maulana</a>
         <img src="/images/profile.jpeg" class="w-64 h-64" alt="">
@@ -77,13 +69,15 @@
         <li class="menu-item pt-3 text-xl font-semibold hover:text-blue-400">
           <a href="#stack">Stack</a>
         </li>
-        <li class="menu-item pt-3 text-xl font-semibold hover:text-blue-400">
-          <a href="#contact">Contact</a>
-        </li>
       </ul>
     </aside>
     
     <main class="w-full bg-gray-900 text-gray-50 self-baseline px-5 md:px-10 h-screen overflow-auto">
+      <!-- <button id="maximizeSidebarBtn" onclick="toggleSidebar()" class="md:hidden z-[-10] absolute top-5">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
+        </svg>        
+      </button> -->
       <section class="md:min-h-screen pt-5 flex items-center" id="profile">
         <div class="p-10 md:p-20 flex flex-col gap-10">
           <div class="text-center">
@@ -119,85 +113,47 @@
       <section class="min-h-screen pt-5" id="projects">
           <h1 class="text-5xl font-semibold mb-5 font-amsterdam tracking-wider">Projects</h1>
           <div class="grid grid-cols-1 gap-3 md:gap-10 md:grid-cols-2">
-            <div class="md:border md:rounded-lg px-3 py-5 md:px-5 md:py-8">
+            <!-- Dahpone -->
+            <div class="md:border md:border-gray-700 md:rounded-lg px-3 py-5 md:px-5 md:py-8">
               <div class="flex flex-wrap md:flex-nowrap items-center gap-5 md:gap-7">
                 <img src="images/homepage.png" class="w-full h-48 md:w-48 md:h-48 object-contain" alt="">
-                <div class="flex justify-between w-full">
-                  <h3 class="text-xl font-semibold">Daphone</h3>
-                  <a href="">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961"/>
-                    </svg>
-                  </a>
-                </div>
+                <a href="https://daphone.my.id" class="hover:text-blue-400 group">
+                  <div class="flex gap-5 items-center">
+                    <h3 class="text-xl font-semibold">Daphone</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 group-hover:-translate-y-1">
+                      <path fill-rule="evenodd" d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z" clip-rule="evenodd" />
+                    </svg>                                       
+                  </div>
+                </a>
               </div>
-              <p>Daphone is an e-commerce website for selling or trade-in a secondhand gadget from around Jabodetabek.</p>
+              <p class="font-medium text-gray-400 text-lg"><span class="font-bold">Daphone</span> is an e-commerce website for selling or trade-in a secondhand gadget from around Jabodetabek.</p>
               <div class="flex flex-wrap gap-3 mt-4">
                 <span class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Laravel</span>
                 <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Tailwindcss</div>
                 <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Vite</div>
+              </div>
+            </div>
+            <!-- Atmosight -->
+            <div class="md:border md:border-gray-700 md:rounded-lg px-3 py-5 md:px-5 md:py-8">
+              <div class="flex flex-wrap md:flex-nowrap items-center gap-5 md:gap-7">
+                <img src="images/atmosight.jpg" class="w-full h-48 md:w-48 md:h-48 object-contain" alt="">
+                <a href="" class="hover:text-blue-400 group">
+                  <div class="flex gap-5">
+                    <h3 class="text-xl font-semibold group-hover:text-blue-300">Atmosight</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 group-hover:-translate-y-1">
+                      <path fill-rule="evenodd" d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z" clip-rule="evenodd" />
+                    </svg>                       
+                  </div>
+                </a>
+              </div>
+              <p class="font-medium text-gray-400 text-lg"><span class="font-bold">Atmosight</span> delivers real-time weather forecasts for cities worldwide with a clean, easy-to-use interface. Stay updated and plan your day with precision, no matter where you are.</p>
+              <div class="flex flex-wrap gap-3 mt-4">
+                <span class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Nextjs</span>
+                <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Tailwindcss</div>
+                <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">OpenWeatherMaps</div>
               </div>
             </div>
   
-            <div class="md:border md:rounded-lg px-3 py-5 md:px-5 md:py-8">
-              <div class="flex flex-wrap md:flex-nowrap items-center gap-5 md:gap-7">
-                <img src="images/homepage.png" class="w-full h-48 md:w-48 md:h-48 object-contain" alt="">
-                <div class="flex justify-between w-full">
-                  <h3 class="text-xl font-semibold">Daphone</h3>
-                  <a href="">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <p>Daphone is an e-commerce website for selling or trade-in a secondhand gadget from around Jabodetabek.</p>
-              <div class="flex flex-wrap gap-3 mt-4">
-                <span class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Laravel</span>
-                <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Tailwindcss</div>
-                <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Vite</div>
-              </div>
-            </div>
-  
-            <div class="md:border md:rounded-lg px-3 py-5 md:px-5 md:py-8">
-              <div class="flex flex-wrap md:flex-nowrap items-center gap-5 md:gap-7">
-                <img src="images/homepage.png" class="w-full h-48 md:w-48 md:h-48 object-contain" alt="">
-                <div class="flex justify-between w-full">
-                  <h3 class="text-xl font-semibold">Daphone</h3>
-                  <a href="">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <p>Daphone is an e-commerce website for selling or trade-in a secondhand gadget from around Jabodetabek.</p>
-              <div class="flex flex-wrap gap-3 mt-4">
-                <span class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Laravel</span>
-                <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Tailwindcss</div>
-                <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Vite</div>
-              </div>
-            </div>
-  
-            <div class="md:border md:rounded-lg px-3 py-5 md:px-5 md:py-8">
-              <div class="flex flex-wrap md:flex-nowrap items-center gap-5 md:gap-7">
-                <img src="images/homepage.png" class="w-full h-48 md:w-48 md:h-48 object-contain" alt="">
-                <div class="flex justify-between w-full">
-                  <h3 class="text-xl font-semibold">Daphone</h3>
-                  <a href="">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <p>Daphone is an e-commerce website for selling or trade-in a secondhand gadget from around Jabodetabek.</p>
-              <div class="flex flex-wrap gap-3 mt-4">
-                <span class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Laravel</span>
-                <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Tailwindcss</div>
-                <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">Vite</div>
-              </div>
-            </div>
           </div>
       </section>
       <section class="min-h-screen pt-5" id="stack">
@@ -220,7 +176,7 @@
                     <p class="font-medium text-sm text-neutral-900 dark:text-neutral-100">Github</p>
                     <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">Featured</span>
                   </div>
-                  <p class="text-neutral-500 text-sm dark:text-neutral-400">Simple repository management.</p>
+                  <p class="text-neutral-500 text-lg dark:text-neutral-400">Simple repository management.</p>
                 </div>
               </a>
               <!-- Postman -->
@@ -228,10 +184,10 @@
                 <img src="images/postman.jpeg" class="w-12 h-12 object-cover rounded-lg" alt="">
                 <div>
                   <div class="flex items-center gap-2">
-                    <p class="font-medium text-sm text-neutral-900 dark:text-neutral-100">Postman</p>
-                    <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">Featured</span>
+                    <p class="font-medium text-lg text-neutral-900 dark:text-neutral-100">Postman</p>
+                    <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300"></span>
                   </div>
-                  <p class="text-neutral-500 text-sm dark:text-neutral-400">Build and test API.</p>
+                  <p class="text-neutral-500 text-lg dark:text-neutral-400">Build and test API.</p>
                 </div>
               </a>
               <!-- Chat GPT -->
@@ -239,10 +195,10 @@
                 <img src="images/chatgpt.png" class="w-12 h-12 object-cover rounded-lg" alt="">
                 <div>
                   <div class="flex items-center gap-2">
-                    <p class="font-medium text-sm text-neutral-900 dark:text-neutral-100">Chat GPT</p>
-                    <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">Featured</span>
+                    <p class="font-medium text-lg text-neutral-900 dark:text-neutral-100">Chat GPT</p>
+                    <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300"></span>
                   </div>
-                  <p class="text-neutral-500 text-sm dark:text-neutral-400">ChatGPT on your desktop.</p>
+                  <p class="text-neutral-500 text-lg dark:text-neutral-400">ChatGPT on your desktop.</p>
                 </div>
               </a>
             </div>
@@ -257,10 +213,10 @@
                 <img src="images/notion.png" class="w-12 h-12 object-cover rounded-lg" alt="">
                 <div>
                   <div class="flex items-center gap-2">
-                    <p class="font-medium text-sm text-neutral-900 dark:text-neutral-100">Notion</p>
-                    <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">Featured</span>
+                    <p class="font-medium text-lg text-neutral-900 dark:text-neutral-100">Notion</p>
+                    <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300"></span>
                   </div>
-                  <p class="text-neutral-500 text-sm dark:text-neutral-400">Documents with endless possibilities.</p>
+                  <p class="text-neutral-500 text-lg dark:text-neutral-400">Documents with endless possibilities.</p>
                 </div>
               </a>
               <!-- Postman -->
@@ -268,10 +224,10 @@
                 <img src="images/pitch.png" class="w-12 h-12 object-cover rounded-lg" alt="">
                 <div>
                   <div class="flex items-center gap-2">
-                    <p class="font-medium text-sm text-neutral-900 dark:text-neutral-100">Pitch</p>
-                    <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">Featured</span>
+                    <p class="font-medium text-lg text-neutral-900 dark:text-neutral-100">Pitch</p>
+                    <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300"></span>
                   </div>
-                  <p class="text-neutral-500 text-sm dark:text-neutral-400">Modern, collaborative presentation tool.</p>
+                  <p class="text-neutral-500 text-lg dark:text-neutral-400">Modern, collaborative presentation tool.</p>
                 </div>
               </a>
               <!-- Chat GPT -->
@@ -279,10 +235,10 @@
                 <img src="images/simple-mind.png" class="w-12 h-12 object-cover rounded-lg" alt="">
                 <div>
                   <div class="flex items-center gap-2">
-                    <p class="font-medium text-sm text-neutral-900 dark:text-neutral-100">Simple Mind</p>
+                    <p class="font-medium text-lg text-neutral-900 dark:text-neutral-100">Simple Mind</p>
                     <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">Featured</span>
                   </div>
-                  <p class="text-neutral-500 text-sm dark:text-neutral-400">Visual mind mapping tool for brainstorming.</p>
+                  <p class="text-neutral-500 text-lg dark:text-neutral-400">Visual mind mapping tool for brainstorming.</p>
                 </div>
               </a>
             </div>
@@ -291,12 +247,33 @@
         </div>
       </section>
       <section class="min-h-screen pt-5" id="about">
-        <h1 class="text-5xl font-amsterdam font-semibold tracking-wider">About</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, totam voluptates doloremque perferendis, ea beatae fuga voluptas, voluptatibus aliquid nihil fugit corporis eius perspiciatis mollitia quas. Sint, ipsam! Ut soluta aliquid animi quidem dicta mollitia excepturi nulla voluptatibus, aperiam iure eos rerum porro quisquam earum expedita non inventore. Optio dolorem quidem exercitationem. Distinctio voluptatum autem obcaecati ipsa saepe tenetur, necessitatibus natus suscipit perferendis molestiae odit inventore odio dignissimos? Reprehenderit minus itaque fuga ad perferendis eveniet minima excepturi atque enim veritatis corporis harum iusto, cumque quia culpa neque impedit cum voluptas ab mollitia! Est provident vitae optio, placeat minima repellendus enim.</p>
-      </section>
-      <section class="min-h-screen pt-5" id="contact">
-        <h1 class="text-5xl font-amsterdam font-semibold tracking-wider">Contact</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, totam voluptates doloremque perferendis, ea beatae fuga voluptas, voluptatibus aliquid nihil fugit corporis eius perspiciatis mollitia quas. Sint, ipsam! Ut soluta aliquid animi quidem dicta mollitia excepturi nulla voluptatibus, aperiam iure eos rerum porro quisquam earum expedita non inventore. Optio dolorem quidem exercitationem. Distinctio voluptatum autem obcaecati ipsa saepe tenetur, necessitatibus natus suscipit perferendis molestiae odit inventore odio dignissimos? Reprehenderit minus itaque fuga ad perferendis eveniet minima excepturi atque enim veritatis corporis harum iusto, cumque quia culpa neque impedit cum voluptas ab mollitia! Est provident vitae optio, placeat minima repellendus enim.</p>
+        <div class="mb-3">
+          <h1 class="text-5xl font-amsterdam font-semibold tracking-wider">About</h1>
+          <p class="text-xl">I’m Rengga Maulana — an Indonesian Software Engineer currently based in Bogor, West Java.</p>
+        </div>
+        <div class="flex flex-col gap-8 text-xl">
+          <p>
+            I’m currently the Chief Product Officer at Corellium — a virtual hardware platform designed for governments, defense contractors and enterprises to perform security research and testing on Arm-based devices.
+          </p>
+          <p>
+            After hours, I’m working on 
+            Eververse, a new type of Product Management tool designed to help Product teams triage feedback, explore problems, ideate solutions, prioritize features and plan roadmaps with the help of AI.
+          </p>
+          <p>
+            Previously, I ran an agency called 
+            Jellypepper
+            where I worked with startups in self-driving cars, AI, biotech, crypto, drone delivery, cybersecurity and even outer space logistics. Jellypepper was acquired in 2023 by Raw Studio.
+          </p>
+          <p>
+            I also founded 
+            Refraction
+            , a suite of AI-based code improvement tools for developers, which was acquired in 2023 by Twistag.
+          </p>
+          <p>
+            I've lived in Sydney, Palo Alto and now Florida; but I've also visited a few other places around the world. Eventually I'll make it everywhere.
+          </p>
+        </div>
+        
       </section>
     </main>
   </div>
@@ -305,6 +282,13 @@
 <script>
   function openMenu() {
     alert('ok')
+  }
+
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const maximizeSidebarBtn = document.getElementById('maximizeSidebarBtn');
+    sidebar.classList.toggle('md:hidden');
+    maximizeSidebarBtn.classList.toggle('md:hidden');
   }
 
 </script>
