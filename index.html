@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="app.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <style>
@@ -22,38 +24,31 @@
         <a class="hover:text-blue-300" href="#projects">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
-          </svg>          
+          </svg>
         </a>
       </li>
       <li>
         <a class="hover:text-blue-300" href="#about">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-          </svg>          
+          </svg>
         </a>
       </li>
       <li>
         <a class="hover:text-blue-300" href="#stack">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3" />
-          </svg>          
-        </a>
-      </li>
-      <li>
-        <a class="hover:text-blue-300" href="#contact">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-          </svg>          
+          </svg>
         </a>
       </li>
     </ul>
   </nav>
-  <div class="flex"> 
+  <div class="flex">
     <aside id="sidebar" class="relative transition duration-300 hidden md:w-1/4 h-screen bg-gray-50 border-r border-white md:flex flex-col justify-evenly items-center">
       <!-- <button onclick="toggleSidebar()" class="absolute top-5 left-5 flex justify-end text-gray-800">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5" />
-        </svg>       
+        </svg>
       </button> -->
       <div class="flex flex-col gap-3 items-center">
         <a href="#profile" class="text-gray-800 hover:text-blue-400 text-4xl font-semibold text-center uppercase">Rengga Maulana</a>
@@ -71,14 +66,9 @@
         </li>
       </ul>
     </aside>
-    
+
     <main class="w-full bg-gray-900 text-gray-50 self-baseline px-5 md:px-10 h-screen overflow-auto">
-      <!-- <button id="maximizeSidebarBtn" onclick="toggleSidebar()" class="md:hidden z-[-10] absolute top-5">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
-        </svg>        
-      </button> -->
-      <section class="md:min-h-screen pt-5 flex items-center" id="profile">
+      <section class="hidden-section md:min-h-screen pt-5 flex items-center" id="profile">
         <div class="p-10 md:p-20 flex flex-col gap-10">
           <div class="text-center">
             <a href="#profile" class="text-6xl font-semibold font-amsterdam tracking-wider">Rengga Maulana</a>
@@ -89,40 +79,40 @@
             <a class="hover:underline text-lg tracking-wider" target="_blank" href="https://github.com/renggamaulana">
               <svg class="w-6 h-6 md:w-8 md:h-8 hover:text-blue-300 transition-transform duration-300 ease-in-out transform hover:translate-y-[-10px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
-              </svg>            
+              </svg>
             </a>
             <a class="hover:underline text-lg tracking-wider" target="_blank" href="https://www.linkedin.com/in/rengga-maulana-93b901194/">
               <svg class="w-6 h-6 md:w-8 md:h-8 hover:text-blue-300 transition-transform duration-300 ease-in-out transform hover:translate-y-[-10px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z" clip-rule="evenodd"/>
                 <path d="M7.2 8.809H4V19.5h3.2V8.809Z"/>
-              </svg>            
+              </svg>
             </a>
             <a class="hover:underline text-lg tracking-wider" target="_blank" href="https://www.instagram.com/renggaamln/">
               <svg class="w-6 h-6 md:w-8 md:h-8 hover:text-blue-300 transition-transform duration-300 ease-in-out transform hover:translate-y-[-10px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
-              </svg>            
+              </svg>
             </a>
             <a class="hover:underline text-lg tracking-wider" target="_blank" href="https://www.facebook.com/profile.php?id=100004812490429&locale=id_ID">
               <svg class="w-6 h-6 md:w-8 md:h-8 hover:text-blue-300 transition-transform duration-300 ease-in-out transform hover:translate-y-[-10px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/>
-              </svg>            
+              </svg>
             </a>
           </div>
         </div>
       </section>
-      <section class="min-h-screen pt-5" id="projects">
-          <h1 class="text-5xl font-semibold mb-5 font-amsterdam tracking-wider">Projects</h1>
+      <section class="hidden-section min-h-screen pt-5" id="projects">
+          <h1 class="text-4xl font-semibold mb-5 font-amsterdam tracking-wider">Projects</h1>
           <div class="grid grid-cols-1 gap-3 md:gap-10 md:grid-cols-2">
             <!-- Dahpone -->
             <div class="md:border md:border-gray-700 md:rounded-lg px-3 py-5 md:px-5 md:py-8">
               <div class="flex flex-wrap md:flex-nowrap items-center gap-5 md:gap-7">
-                <img src="images/homepage.png" class="w-full h-48 md:w-48 md:h-48 object-contain" alt="">
+                <img src="images/homepage.png" class="w-full h-48 md:w-48 md:h-28 object-container rounded" alt="">
                 <a href="https://daphone.my.id" class="hover:text-blue-400 group">
                   <div class="flex gap-5 items-center">
                     <h3 class="text-xl font-semibold">Daphone</h3>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 group-hover:-translate-y-1">
                       <path fill-rule="evenodd" d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z" clip-rule="evenodd" />
-                    </svg>                                       
+                    </svg>
                   </div>
                 </a>
               </div>
@@ -136,13 +126,13 @@
             <!-- Atmosight -->
             <div class="md:border md:border-gray-700 md:rounded-lg px-3 py-5 md:px-5 md:py-8">
               <div class="flex flex-wrap md:flex-nowrap items-center gap-5 md:gap-7">
-                <img src="images/atmosight.jpg" class="w-full h-48 md:w-48 md:h-48 object-contain" alt="">
+                <img src="images/atmosight.jpg" class="w-full h-48 md:w-48 md:h-28 object-container rounded" alt="">
                 <a href="" class="hover:text-blue-400 group">
                   <div class="flex gap-5">
                     <h3 class="text-xl font-semibold group-hover:text-blue-300">Atmosight</h3>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 group-hover:-translate-y-1">
                       <path fill-rule="evenodd" d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z" clip-rule="evenodd" />
-                    </svg>                       
+                    </svg>
                   </div>
                 </a>
               </div>
@@ -153,12 +143,11 @@
                 <div class="px-4 py-1 bg-slate-800 hover:bg-slate-700 text-[#38bdf8] rounded-full">OpenWeatherMaps</div>
               </div>
             </div>
-  
           </div>
       </section>
-      <section class="min-h-screen pt-5" id="stack">
+      <section class="hidden-section min-h-screen pt-5" id="stack">
         <div class="mb-5">
-          <h1 class="text-5xl font-semibold font-amsterdam tracking-wider">STACK</h1>
+          <h1 class="text-4xl font-semibold font-amsterdam tracking-wider">STACK</h1>
           <p class="text-xl tracking-wide">Tools and technologies I use.</p>
         </div>
 
@@ -169,18 +158,18 @@
             <p class="m-0 block shrink-0 px-4 py-2 font-medium text-md md:text-xl text-neutral-900 dark:text-neutral-100">Coding</h3>
             <div class="relative flex-1 overflow-hidden rounded-xl border shadow-sm border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950 grid gap-x-2 p-2 sm:grid-cols-2">
               <!-- Github -->
-              <a href="" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
+              <a href="https://github.com" target="_blank" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
                 <img src="images/github.png" class="w-12 h-12 object-cover rounded-lg" alt="">
                 <div>
                   <div class="flex items-center gap-2">
-                    <p class="font-medium text-sm text-neutral-900 dark:text-neutral-100">Github</p>
+                    <p class="font-medium text-lg text-neutral-900 dark:text-neutral-100">Github</p>
                     <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">Featured</span>
                   </div>
                   <p class="text-neutral-500 text-lg dark:text-neutral-400">Simple repository management.</p>
                 </div>
               </a>
               <!-- Postman -->
-              <a href="" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
+              <a href="https://postman.com" target="_blank" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
                 <img src="images/postman.jpeg" class="w-12 h-12 object-cover rounded-lg" alt="">
                 <div>
                   <div class="flex items-center gap-2">
@@ -191,7 +180,7 @@
                 </div>
               </a>
               <!-- Chat GPT -->
-              <a href="" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
+              <a href="https://chatgpt.com" target="_blank" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
                 <img src="images/chatgpt.png" class="w-12 h-12 object-cover rounded-lg" alt="">
                 <div>
                   <div class="flex items-center gap-2">
@@ -201,15 +190,25 @@
                   <p class="text-neutral-500 text-lg dark:text-neutral-400">ChatGPT on your desktop.</p>
                 </div>
               </a>
+              <!-- Chat GPT -->
+              <a href="https://docker.com" target="_blank" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                <img src="images/docker.png" class="w-12 h-12 object-cover rounded-lg" alt="">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <p class="font-medium text-lg text-neutral-900 dark:text-neutral-100">Docker</p>
+                    <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300"></span>
+                  </div>
+                  <p class="text-neutral-500 text-lg dark:text-neutral-400">Docker simplifies running apps in portable containers.</p>
+                </div>
+              </a>
             </div>
           </div>
-  
           <!-- Productivity -->
           <div class="flex flex-col rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900">
             <p class="m-0 block shrink-0 px-4 py-2 font-medium text-md md:text-xl text-neutral-900 dark:text-neutral-100">Productivity</h3>
             <div class="relative flex-1 overflow-hidden rounded-xl border shadow-sm border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950 grid gap-x-2 p-2 sm:grid-cols-2">
               <!-- Notion -->
-              <a href="" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
+              <a href="https://notion.so" target="_blank" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
                 <img src="images/notion.png" class="w-12 h-12 object-cover rounded-lg" alt="">
                 <div>
                   <div class="flex items-center gap-2">
@@ -220,7 +219,7 @@
                 </div>
               </a>
               <!-- Postman -->
-              <a href="" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
+              <a href="https://pitch.com" target="_blank" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
                 <img src="images/pitch.png" class="w-12 h-12 object-cover rounded-lg" alt="">
                 <div>
                   <div class="flex items-center gap-2">
@@ -231,24 +230,24 @@
                 </div>
               </a>
               <!-- Chat GPT -->
-              <a href="" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
+              <a href="https://simplemind.eu" target="_blank" class="flex items-center gap-4 rounded-lg p-4 no-underline transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800">
                 <img src="images/simple-mind.png" class="w-12 h-12 object-cover rounded-lg" alt="">
                 <div>
                   <div class="flex items-center gap-2">
                     <p class="font-medium text-lg text-neutral-900 dark:text-neutral-100">Simple Mind</p>
-                    <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">Featured</span>
+                    <span class="rounded-full px-2 font-medium text-xs bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300"></span>
                   </div>
                   <p class="text-neutral-500 text-lg dark:text-neutral-400">Visual mind mapping tool for brainstorming.</p>
                 </div>
               </a>
             </div>
           </div>
-        
+
         </div>
       </section>
-      <section class="min-h-screen pt-5" id="about">
+      <section class="hidden-section min-h-screen pt-5" id="about">
         <div class="mb-3">
-          <h1 class="text-5xl font-amsterdam font-semibold tracking-wider">About</h1>
+          <h1 class="text-4xl font-amsterdam font-semibold tracking-wider">About</h1>
           <p class="text-xl">I’m Rengga Maulana — an Indonesian Software Engineer currently based in Bogor, West Java.</p>
         </div>
         <div class="flex flex-col gap-8 text-xl">
@@ -256,16 +255,16 @@
             I’m currently the Chief Product Officer at Corellium — a virtual hardware platform designed for governments, defense contractors and enterprises to perform security research and testing on Arm-based devices.
           </p>
           <p>
-            After hours, I’m working on 
+            After hours, I’m working on
             Eververse, a new type of Product Management tool designed to help Product teams triage feedback, explore problems, ideate solutions, prioritize features and plan roadmaps with the help of AI.
           </p>
           <p>
-            Previously, I ran an agency called 
-            Jellypepper
+            Previously, I ran an agency called
+           Jellypepper
             where I worked with startups in self-driving cars, AI, biotech, crypto, drone delivery, cybersecurity and even outer space logistics. Jellypepper was acquired in 2023 by Raw Studio.
           </p>
           <p>
-            I also founded 
+            I also founded
             Refraction
             , a suite of AI-based code improvement tools for developers, which was acquired in 2023 by Twistag.
           </p>
@@ -273,23 +272,8 @@
             I've lived in Sydney, Palo Alto and now Florida; but I've also visited a few other places around the world. Eventually I'll make it everywhere.
           </p>
         </div>
-        
       </section>
     </main>
   </div>
 </body>
-
-<script>
-  function openMenu() {
-    alert('ok')
-  }
-
-  function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    const maximizeSidebarBtn = document.getElementById('maximizeSidebarBtn');
-    sidebar.classList.toggle('md:hidden');
-    maximizeSidebarBtn.classList.toggle('md:hidden');
-  }
-
-</script>
 </html>
